@@ -1,0 +1,16 @@
+C:\Users\kjo\Desktop\C#\PopUpDemo\bin\Debug\WPFDemo.exe.config
+C:\Users\kjo\Desktop\C#\PopUpDemo\bin\Debug\WPFDemo.exe
+C:\Users\kjo\Desktop\C#\PopUpDemo\bin\Debug\WPFDemo.pdb
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\Views\MainWindow.g.cs
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\Views\PopupWindow.g.cs
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\App.g.cs
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\WPFDemo_MarkupCompile.cache
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\WPFDemo_MarkupCompile.lref
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\Views\MainWindow.baml
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\Views\PopupWindow.baml
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\WPFDemo.g.resources
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\WPFDemo.Properties.Resources.resources
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\PopUpDemo.csproj.GenerateResource.Cache
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\WPFDemo.exe
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\WPFDemo.pdb
+C:\Users\kjo\Desktop\C#\PopUpDemo\obj\Debug\PopUpDemo.csprojResolveAssemblyReference.cache
