@@ -1,0 +1,78 @@
+﻿<Window x:Class="Person_WPF_CS.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Person_WPF_CS.Views"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="420" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Margin="3" Height="40">
+            <Label  DockPanel.Dock="Top" Content="&lt;Register&gt;" FontSize="15"  HorizontalContentAlignment="Center"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="1" Margin="10" Height="40" >
+            <Label DockPanel.Dock="Top"  Content="{Binding RegisterErrorMessage}" FontSize="15"  HorizontalContentAlignment="Center"/>
+        </DockPanel>
+
+        <!--Grid.Row="1"-->
+        <DockPanel Margin="3" Grid.Row="2">
+            <Label Content="ID" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding ID, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+            <Label Content="PW" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding PW, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+        </DockPanel>
+
+        <!--Grid.Row="2"-->
+        <DockPanel Margin="3" Grid.Row="3">
+            <Label Content="Vorname" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding Vorname, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+            <Label Content="Nachname" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding Nachname, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Margin="6,10,0,30" Height="40" Grid.RowSpan="4">
+            <Label  DockPanel.Dock="Top" Content="Addresse" FontSize="12"  HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        </DockPanel>
+
+        <!--Grid.Row="4"-->
+        <DockPanel Margin="3" Grid.Row="5">
+            <Label Content="E-Mail" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding EMail, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+            <Label Content="Tel.Nr" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding TelNr, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+        </DockPanel>
+        <!--Grid.Row="5"-->
+        <DockPanel Margin="3" Grid.Row="6">
+            <Label Content="Haus Nr" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding HausNr, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+            <Label Content="PLZ" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding PLZ, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+        </DockPanel>
+        <!--Grid.Row="6"-->
+        <DockPanel Margin="3" Grid.Row="7">
+            <Label Content="Stadt" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding Stadt, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+            <Label Content="Land" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="{Binding Land, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+        </DockPanel>
+        <!--Grid.Row="7"-->
+        <StackPanel Margin="0,7,0,0" Orientation="Horizontal" Grid.Row="8" HorizontalAlignment="Center">
+            <Button Content="Bestaetigen" Command="{Binding OKCmd}" Margin="3" Width="150" HorizontalAlignment="Center" />
+            <Button Content="Abbrechen" Command="{Binding CancelCmd}" Margin="3" Width="150" HorizontalAlignment="Center" />
+        </StackPanel>
+
+    </Grid>
+</Window>
