@@ -1,0 +1,152 @@
+﻿<Window x:Class="Person_WPF_CS.Views.AdresseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Person_WPF_CS.Views"
+        mc:Ignorable="d"
+        Title="AdresseWindow" Height="300" SizeToContent="Width">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Margin="10">
+            <Button Command="{Binding AdrHinzufuegenCmd}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Components/Icon/plus.png" Width="20" />
+                    <TextBlock FontSize="5"></TextBlock>
+                    <TextBlock FontWeight="Bold">Neue Adresse</TextBlock>
+                    <TextBlock FontSize="5"></TextBlock>
+                    <TextBlock FontWeight="Bold">Hinzufuegen</TextBlock>
+                </StackPanel>
+            </Button>
+        </DockPanel>
+
+        <!-- Adresse 1-->
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Width="200" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Margin="0" Grid.Row="0">
+                    <TextBlock Text="&lt;Adresse 1&gt;" HorizontalAlignment="Center" />
+                </StackPanel>
+                <DockPanel Margin="0" Grid.Row="1">
+                    <TextBlock Text="Haus Nr." DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add1.HausNr}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="2">
+                    <TextBlock Text="Strasse" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add1.Strasse}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="3">
+                    <TextBlock Text="PLZ" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add1.PLZ}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="4">
+                    <TextBlock Text="Stadt" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add1.Stadt}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="5">
+                    <TextBlock Text="Land" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add1.Land}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+            </Grid>
+            
+            
+            <Button Margin="5" Command="{Binding AdrBearbeiten1}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Components/Icon/bearbeiten.png" Width="22" />
+                    <TextBlock FontWeight="Bold">Bearbeiten</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Margin="5" Command="{Binding AdrEntfernen1}">
+                <StackPanel Orientation="Vertical" >
+                    <Image Source="/Components/Icon/delete.png" Width="22" />
+                    <TextBlock FontWeight="Bold">Entfernen</TextBlock>
+                </StackPanel>
+            </Button>
+            
+        </StackPanel>
+
+        <!-- Adresse 2-->
+        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Vertical" Width="200" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Margin="0" Grid.Row="0">
+                    <TextBlock Text="&lt;Adresse 2&gt;" HorizontalAlignment="Center" />
+                </StackPanel>
+                <DockPanel Margin="0" Grid.Row="1">
+                    <TextBlock Text="Haus Nr." DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add2.HausNr}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="2">
+                    <TextBlock Text="Strasse" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add2.Strasse}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="3">
+                    <TextBlock Text="PLZ" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add2.PLZ2}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="4">
+                    <TextBlock Text="Stadt" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add2.Stadt2}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+                <DockPanel Margin="0" Grid.Row="5">
+                    <TextBlock Text="Land" DockPanel.Dock="Left" Width="60"/>
+                    <Label Content="{Binding Add2.Land2}" DockPanel.Dock="Right" Width="120"/>
+                </DockPanel>
+            </Grid>
+
+
+            <Button Margin="5" Command="{Binding AdrBearbeiten2}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Components/Icon/bearbeiten.png" Width="22" />
+                    <TextBlock FontWeight="Bold">Bearbeiten</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Margin="5" Command="{Binding AdrEntfernen2}">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Components/Icon/delete.png" Width="22" />
+                    <TextBlock FontWeight="Bold">Entfernen</TextBlock>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+        
+        <!-- zurueck button-->
+        <DockPanel Grid.Row="0" Grid.Column="3" Width="100" Margin="10" LastChildFill="False" >
+            <Button DockPanel.Dock="Bottom" Command="{Binding ZurueckCmd}" Grid.Row="2" Grid.Column="1" Width="100" Height="40" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Components/Icon/icon-return-arrow.png" Width="15" />
+                    <TextBlock FontSize="14" Text=" Zurueck"></TextBlock>
+                </StackPanel>
+            </Button>
+        </DockPanel>
+    </Grid> 
+</Window>

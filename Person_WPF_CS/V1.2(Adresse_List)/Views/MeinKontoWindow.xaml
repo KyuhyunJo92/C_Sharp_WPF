@@ -1,0 +1,68 @@
+﻿<Window x:Class="Person_WPF_CS.Views.MeinKontoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Person_WPF_CS.Views"
+        mc:Ignorable="d"
+        Title="MeinKontoWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Button Content="Meine Bestellungen" Command="{Binding MeineBestellungenBtnCmd}" Grid.Row="0" Grid.Column="0" Margin="10" Width="120" Height="40" FontSize="12" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Adresse" Command="{Binding AdresseBtnCmd}" Grid.Row="0" Grid.Column="1" Margin="10" Width="120" Height="40" FontSize="12" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Meine Zahlungen" Command="{Binding MeineZahlungenBtnCmd}" Grid.Row="1" Grid.Column="0" Margin="10" Width="120" Height="40" FontSize="12" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Command="{Binding AnmeldenUndSicherheitBtnCmd}" Grid.Row="1" Grid.Column="1" Margin="10" Width="120" Height="40" FontSize="12">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Vertical">
+                <TextBlock FontSize="12" Text="Anmelden und" HorizontalAlignment="Center"/>
+                <TextBlock FontSize="1" Text=""/>
+                <TextBlock FontSize="12" Text="Sicherheit" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button Command="{Binding ZumStartbildschirmBtnCmd}" Grid.Row="2" Grid.Column="1" Width="120" Height="40" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Components/Icon/icon-return-arrow.png" Width="15" />
+                <TextBlock FontSize="14" Text=" Zurueck"> </TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
