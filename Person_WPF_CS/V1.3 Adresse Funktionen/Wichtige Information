@@ -1,6 +1,10 @@
+WPF-Anwendung
+
+Projece Name : Person_WPF_CS
+
+
 Login ID : Neu123, PW : 123
 mydb file path : C:/temp/mydb
-Projece Name : Person_WPF_CS
 
 Adresse Bearbeiten, Loeschen, Hinzufuegen funktionen ungestzt wird.
 keinen einzel Element von class Adresse oder Person referenzieren, aber direkt Adresse obj Adr oder Person obj pers.
