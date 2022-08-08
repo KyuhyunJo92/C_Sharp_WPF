@@ -1,0 +1,54 @@
+﻿<Window x:Class="Person_WPF_CS.Views.AdresseLoeschenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Person_WPF_CS.Views"
+        mc:Ignorable="d"
+        Title="AdresseLoeschenWindow" Height="320" SizeToContent="Width">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- -->
+                <Label Margin="2" Grid.Column="0" Grid.Row="0" Content="AdrTyp"/>
+                <Label Margin="2" Grid.Column="0" Grid.Row="1" Content="HausNr"/>
+                <Label Margin="2" Grid.Column="0" Grid.Row="2" Content="Strasse"/>
+                <Label Margin="2" Grid.Column="0" Grid.Row="3" Content="PLZ"/>
+                <Label Margin="2" Grid.Column="0" Grid.Row="4" Content="Stadt"/>
+                <Label Margin="2" Grid.Column="0" Grid.Row="5" Content="Land"/>
+                <Label Margin="2" Grid.Column="0" Grid.Row="6" Content=""/>
+                <!-- -->
+                <Label Margin="2" Grid.Column="1" Grid.Row="0" Content="{Binding SelectedAdr.AdrTyp}"/>
+                <Label Margin="2" Grid.Column="1" Grid.Row="1" Content="{Binding SelectedAdr.HausNr}"/>
+                <Label Margin="2" Grid.Column="1" Grid.Row="2" Content="{Binding SelectedAdr.Strasse}"/>
+                <Label Margin="2" Grid.Column="1" Grid.Row="3" Content="{Binding SelectedAdr.PLZ}"/>
+                <Label Margin="2" Grid.Column="1" Grid.Row="4" Content="{Binding SelectedAdr.Stadt}"/>
+                <Label Margin="2" Grid.Column="1" Grid.Row="5" Content="{Binding SelectedAdr.Land}"/>
+
+            </Grid>
+        </StackPanel>
+        <Label Grid.Row="1" Content="**Moechten Sie Wirckliche die ausgewaehlte Adresse loeschen?"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Command ="{Binding OKCmd}" Content="Loeschen" Width="100" Margin="5" Height="30"></Button>
+            <Button Command="{Binding CancelCmd}" Content="Abbrechen" Width="100" Margin="5" Height="30"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

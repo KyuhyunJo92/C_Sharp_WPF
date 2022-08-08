@@ -1,0 +1,91 @@
+﻿<Window x:Class="Person_WPF_CS.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Person_WPF_CS.Views"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <!--Grid.Row="0"-->
+        <DockPanel Grid.Row="0" Margin="3" Height="40">
+            <Label  DockPanel.Dock="Top" Content="&lt;Register&gt;" FontSize="15"  HorizontalContentAlignment="Center"/>
+        </DockPanel>
+
+        <!--Grid.Row="1"-->
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="{Binding RegisterMessage}" FontSize="15"  HorizontalContentAlignment="Center"/>
+
+                <StackPanel Margin="3" Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <Label  Content="ID" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding Pers.ID, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <Label Content="PW" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding Pers.PW, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="3" Grid.Row="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <Label  Content="Vorname" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding Pers.Vorname, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <Label Content="Nachname" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding Pers.Nachname, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Margin="3" Grid.Row="3">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <Label  Content="EMail" Width="80"  HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding Pers.EMail, UpdateSourceTrigger=PropertyChanged}" Width="155"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <Label Content="TelNr" Width="80" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+                            <TextBox Text="{Binding Pers.TelNr, UpdateSourceTrigger=PropertyChanged}" Width="155" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="0,7,0,0" Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <Button Content="Registrieren" Command="{Binding OKCmd}" IsDefault="True" Margin="3" Width="150" HorizontalAlignment="Center" />
+            <Button Content="Abbrechen" Command="{Binding CancelCmd}" Margin="3" Width="150" HorizontalAlignment="Center" />
+        </StackPanel>
+
+    </Grid>
+</Window>
