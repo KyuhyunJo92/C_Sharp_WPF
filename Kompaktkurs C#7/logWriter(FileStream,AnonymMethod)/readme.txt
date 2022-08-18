@@ -1,0 +1,3 @@
+FileStream
+
+AnonymMethod, Lambda Ausdruck
