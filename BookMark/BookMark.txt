@@ -1,0 +1,1 @@
+Github_dotnet src/libraries/System.Collections/src/System/Collections/Generic/Stack.cs
